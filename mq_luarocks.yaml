@@ -1,0 +1,18 @@
+lsqlite3complete: 
+  external_deps:
+    - sqlite3[math,geopoly,json1]
+  files: 
+    - lsqlite3complete.dll
+lua-cjson: 
+  files: 
+    - cjson.dll
+luafilesystem:
+  files:
+    - lfs.dll
+luasocket:
+  files:
+    - mime\core.dll
+    - socket\core.dll
+lyaml:
+  external_deps:
+    - libyaml
