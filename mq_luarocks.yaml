@@ -1,10 +1,13 @@
-lsqlite3complete: 
+lsqlite3:
   external_deps:
     - sqlite3[math,geopoly,json1]
-  files: 
+  files:
+    - lsqlite3.dll
+lsqlite3complete:
+  files:
     - lsqlite3complete.dll
-lua-cjson: 
-  files: 
+lua-cjson:
+  files:
     - cjson.dll
 luafilesystem:
   files:
