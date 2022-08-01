@@ -12,6 +12,9 @@ lua-cjson:
 luafilesystem:
   files:
     - lfs.dll
+luasec:
+  external_deps:
+    - openssl
 luasocket:
   files:
     - mime\core.dll
