@@ -24,3 +24,5 @@ luasocket:
 lyaml:
   external_deps:
     - libyaml
+  files:
+    - yaml.dll
