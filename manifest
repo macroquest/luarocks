@@ -64,9 +64,6 @@ repository = {
    lyaml = {
       ["6.2.7-1"] = {
          {
-            arch = "all"
-         },
-         {
             arch = "win32-x86"
          },
          {
