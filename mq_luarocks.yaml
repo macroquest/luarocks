@@ -1,3 +1,4 @@
+fun:
 lsqlite3:
   external_deps:
     - sqlite3[math,geopoly,json1]
