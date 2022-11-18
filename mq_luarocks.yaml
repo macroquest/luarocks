@@ -28,3 +28,5 @@ lyaml:
     - libyaml
   files:
     - yaml.dll
+uuid:
+  lua_only: true
