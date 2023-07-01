@@ -24,6 +24,7 @@ luasocket:
     - mime\core.dll
     - socket\core.dll
 lyaml:
+  override_source: true
   external_deps:
     - libyaml
   files:
