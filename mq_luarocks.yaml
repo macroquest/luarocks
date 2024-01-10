@@ -1,3 +1,5 @@
+argparse:
+  lua_only: true
 fun:
   lua_only: true
 lsqlite3:
