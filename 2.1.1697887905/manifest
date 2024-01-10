@@ -61,6 +61,9 @@ repository = {
    luasocket = {
       ["3.1.0-1"] = {
          {
+            arch = "win32-x86"
+         },
+         {
             arch = "win32-x86_64"
          }
       }
