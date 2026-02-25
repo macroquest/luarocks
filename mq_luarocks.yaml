@@ -13,6 +13,9 @@ lsqlite3complete:
 lua-cjson:
   files:
     - cjson.dll
+lua-protobuf:
+  files:
+    - pb.dll
 luafilesystem:
   files:
     - lfs.dll
