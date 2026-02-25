@@ -23,6 +23,11 @@ repository = {
          {
             arch = "win32-x86_64"
          }
+      },
+      ["0.9.6-1"] = {
+         {
+            arch = "win32-x86_64"
+         }
       }
    },
    lsqlite3complete = {
@@ -30,6 +35,11 @@ repository = {
          {
             arch = "win32-x86"
          },
+         {
+            arch = "win32-x86_64"
+         }
+      },
+      ["0.9.6-1"] = {
          {
             arch = "win32-x86_64"
          }
@@ -45,11 +55,23 @@ repository = {
          }
       }
    },
+   ["lua-protobuf"] = {
+      ["0.5.3-1"] = {
+         {
+            arch = "win32-x86_64"
+         }
+      }
+   },
    luafilesystem = {
       ["1.8.0-1"] = {
          {
             arch = "win32-x86"
          },
+         {
+            arch = "win32-x86_64"
+         }
+      },
+      ["1.9.0-1"] = {
          {
             arch = "win32-x86_64"
          }
@@ -87,6 +109,11 @@ repository = {
    },
    uuid = {
       ["0.3-1"] = {
+         {
+            arch = "all"
+         }
+      },
+      ["1.0.0-1"] = {
          {
             arch = "all"
          }
