@@ -11,7 +11,7 @@ on:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -30,6 +30,41 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Update index.html with version directories
+        run: |
+          # Find all version directories (directories with index.html)
+          VERSION_DIRS=$(find . -maxdepth 2 -name "index.html" -path "./*/index.html" | sed 's|/index.html||' | sed 's|^\./||' | sort -rV)
+
+          # Build the version list HTML
+          VERSION_HTML=""
+          for dir in $VERSION_DIRS; do
+            VERSION_HTML="${VERSION_HTML}        <li><a href=\"${dir}/index.html\">${dir}</a></li>\n"
+          done
+
+          # Replace the version list in index.html between the markers
+          sed -i '/<!-- VERSION_LIST_START -->/,/<!-- VERSION_LIST_END -->/{
+            /<!-- VERSION_LIST_START -->/{
+              p
+              r /dev/stdin
+            }
+            /<!-- VERSION_LIST_END -->/!d
+          }' index.html <<< "$(echo -e "$VERSION_HTML")"
+
+          echo "Updated index.html with versions: $VERSION_DIRS"
+
+      - name: Commit index.html if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet index.html; then
+            echo "No changes to index.html"
+          else
+            git add index.html
+            git commit -m "Update index.html with version list"
+            git push
+          fi
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
