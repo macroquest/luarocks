@@ -13,6 +13,11 @@ lsqlite3complete:
 lua-cjson:
   files:
     - cjson.dll
+lua-curl:
+  external_deps:
+    - curl
+  files:
+    - lcurl.dll
 lua-protobuf:
   files:
     - pb.dll
