@@ -18,6 +18,8 @@ lua-curl:
     - curl
   files:
     - lcurl.dll
+  ignore_upstream:
+    - 0.3.13-1
 lua-protobuf:
   files:
     - pb.dll
